@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  background: #333;
+}
+.severity-3 {
+  background-color: red !important;
+  color: white !important;
+}

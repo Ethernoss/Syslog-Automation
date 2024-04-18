@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Logs</title>
+    <link rel="stylesheet" href="static/style2.css">  
+</head>
+<body>
+    <h1>Router Logs</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>IP Address</th>
+                <th>Severity</th>
+                <th>Hostname</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr {% if log['Severity'] == 3 %} style="background-color: red; color: white;" {% endif %}>
+                <td>{{ log['Timestamp'] }}</td>
+                <td>{{ log['IP Address'] }}</td>
+                <td>{{ log['Severity'] }}</td>
+                <td>{{ log['Hostname'] }}</td>
+                <td>{{ log['Message'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </tbody>
+    </table>
+</body>
+</html>
