@@ -34,10 +34,15 @@
         </table>
     </div>
     <script>
+        // Seleccionar todas las filas de la tabla
         const trs = Array.from(document.querySelectorAll("tr"));
+        // Iterar sobre cada fila
         trs.forEach((tr) => {
+             // Seleccionar la celda de Severity en la fila actual
             const severity = Array.from(tr.children)[2];
+            // Verificar si la severidad es 7
             if (Number(severity.textContent) === 7)
+            // Agregar una clase a la fila para resaltarla
                 tr.classList.add("severity-7")
         })
     </script>
