@@ -29,7 +29,7 @@ def extract_logs(connection, router_command):
         
         return filtered_logs # Devolver la lista filtered_logs
     except Exception as e:
-        print(f"Failed to extract logs: {e}")
+        print(f"Failed to extract logs: {e}") 
         return []
 
 def connect(server):
